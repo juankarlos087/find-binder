@@ -8,14 +8,14 @@
 		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.seguimiento</groupId>
-	<artifactId>carpetas</artifactId>
+	<groupId>seguimiento</groupId>
+	<artifactId>FIND_BINDER</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>carpetas</name>
-	<description>Sistema de seguimiento de carpetas de contratación</description>
+	<name>FIND BINDER</name>
+	<description>Sistema de seguimiento a carpetas de contratacion</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>18</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

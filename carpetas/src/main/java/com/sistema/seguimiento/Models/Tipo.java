@@ -1,5 +1,4 @@
-
-package com.seguimiento.carpetas.Models;
+package com.sistema.seguimiento.Models;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -18,14 +17,16 @@ public class Tipo implements Serializable {
     private int codigo_tip;
     @Column(name="estado_tip")
     private String estado_tip;
-
+    @Column(name="observacion_tip")
+    private String observacion_tip;
 
     public Tipo() {
     }
 
-    public Tipo(int codigo_tip, String estado_tip) {
+    public Tipo(int codigo_tip, String estado_tip, String observacion_tip) {
         this.codigo_tip = codigo_tip;
         this.estado_tip = estado_tip;
+        this.observacion_tip = observacion_tip;
     }
 
     public int getCodigo_tip() {
@@ -44,5 +45,12 @@ public class Tipo implements Serializable {
         this.estado_tip = estado_tip;
     }
 
-    
+    public String getObservacion_tip() {
+        return observacion_tip;
+    }
+
+    public void setObservacion_tip(String observacion_tip) {
+        this.observacion_tip = observacion_tip;
+    }
+
 }

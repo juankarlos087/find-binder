@@ -1,7 +1,6 @@
+package com.sistema.seguimiento.Service;
 
-package com.seguimiento.carpetas.Services;
-
-import com.seguimiento.carpetas.Models.Carpeta;
+import com.sistema.seguimiento.Models.Carpeta;
 import java.util.List;
 
 public interface CarpetaService {

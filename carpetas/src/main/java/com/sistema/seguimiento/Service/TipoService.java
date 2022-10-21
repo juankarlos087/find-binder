@@ -1,7 +1,6 @@
+package com.sistema.seguimiento.Service;
 
-package com.seguimiento.carpetas.Services;
-
-import com.seguimiento.carpetas.Models.Tipo;
+import com.sistema.seguimiento.Models.Tipo;
 import java.util.List;
 
 public interface TipoService {

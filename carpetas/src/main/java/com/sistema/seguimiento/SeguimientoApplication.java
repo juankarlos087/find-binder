@@ -1,13 +1,13 @@
-package com.seguimiento.carpetas;
+package com.sistema.seguimiento;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CarpetasApplication {
+public class SeguimientoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CarpetasApplication.class, args);
+		SpringApplication.run(SeguimientoApplication.class, args);
 	}
 
 }

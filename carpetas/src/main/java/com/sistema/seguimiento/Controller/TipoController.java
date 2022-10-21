@@ -1,9 +1,7 @@
+package com.sistema.seguimiento.Controller;
 
-package com.seguimiento.carpetas.Controller;
-
-
-import com.seguimiento.carpetas.Models.Tipo;
-import com.seguimiento.carpetas.Services.TipoService;
+import com.sistema.seguimiento.Models.Tipo;
+import com.sistema.seguimiento.Service.TipoService;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +46,7 @@ public class TipoController {
         Tipo obj = tipoService.findById(tipo.getCodigo_tip());
         if(obj!=null){
             obj.setEstado_tip(tipo.getEstado_tip());
+            obj.setObservacion_tip(tipo.getObservacion_tip());
             tipoService.save(obj);
         } else {
             return new ResponseEntity<>(obj, HttpStatus.INTERNAL_SERVER_ERROR);

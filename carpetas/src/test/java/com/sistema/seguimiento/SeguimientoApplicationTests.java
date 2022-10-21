@@ -1,10 +1,10 @@
-package com.seguimiento.carpetas;
+package com.sistema.seguimiento;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CarpetasApplicationTests {
+class SeguimientoApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,14 +1,13 @@
+package com.sistema.seguimiento.Service.Implement;
 
-package com.seguimiento.carpetas.Service.Implements;
-
-import com.seguimiento.carpetas.Dao.CarpetaDao;
-import com.seguimiento.carpetas.Models.Carpeta;
-import com.seguimiento.carpetas.Services.CarpetaService;
+import com.sistema.seguimiento.Models.Carpeta;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.sistema.seguimiento.Dao.CarpetaDao;
+import com.sistema.seguimiento.Service.CarpetaService;
 
 @Service
 public class CarpetaServiceImpl implements CarpetaService {

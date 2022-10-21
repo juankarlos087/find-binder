@@ -1,8 +1,7 @@
+package com.sistema.seguimiento.Controller;
 
-package com.seguimiento.carpetas.Controller;
-
-import com.seguimiento.carpetas.Models.Carpeta;
-import com.seguimiento.carpetas.Services.CarpetaService;
+import com.sistema.seguimiento.Models.Carpeta;
+import com.sistema.seguimiento.Service.CarpetaService;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +43,7 @@ public class CarpetaController {
     
     @PutMapping(value="/")
     public ResponseEntity<Carpeta> editar(@RequestBody Carpeta carpeta){
-        Carpeta obj = carpetaService.findById(carpeta.getNumero_emp());
+        Carpeta obj = carpetaService.findById(carpeta.getCodigo_car());
         if(obj!=null){
             obj.setTipo(carpeta.getTipo());
             obj.setNombre_emp(carpeta.getNombre_emp());

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-09-2022 a las 22:02:20
+-- Tiempo de generación: 21-10-2022 a las 04:04:21
 -- Versión del servidor: 5.7.11
 -- Versión de PHP: 5.6.18
 
@@ -58,7 +58,10 @@ CREATE TABLE `carpeta` (
 --
 
 INSERT INTO `carpeta` (`codigo_car`, `nombre_emp`, `identificacion_emp`, `codigo_tip`) VALUES
-(1, 'sura', '525', 1);
+(1, 'juan', '1010013908', 1),
+(2, 'andres', '27878345', 1),
+(3, 'antonio', '10908734567', 1),
+(4, 'leonardo', '88654334', 3);
 
 -- --------------------------------------------------------
 
@@ -106,16 +109,31 @@ INSERT INTO `responsable` (`codigo_res`, `nombre_res`, `dependencia_res`, `codig
 
 CREATE TABLE `tipo` (
   `codigo_tip` int(11) NOT NULL,
-  `estado_tip` varchar(10) NOT NULL
+  `estado_tip` varchar(10) NOT NULL,
+  `observacion_tip` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tipo`
 --
 
-INSERT INTO `tipo` (`codigo_tip`, `estado_tip`) VALUES
-(1, 'nueva'),
-(2, 'Renovacion');
+INSERT INTO `tipo` (`codigo_tip`, `estado_tip`, `observacion_tip`) VALUES
+(1, 'ACTIVA', ''),
+(2, 'INACTIVA', ''),
+(3, 'MUERTO', ''),
+(4, 'RECHAZADA', 'Falta documentacion');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id_usuario` int(2) NOT NULL,
+  `nombre_usuario` varchar(30) NOT NULL,
+  `clave_usuario` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Índices para tablas volcadas
@@ -156,6 +174,12 @@ ALTER TABLE `tipo`
   ADD PRIMARY KEY (`codigo_tip`);
 
 --
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id_usuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -168,7 +192,7 @@ ALTER TABLE `asignacion`
 -- AUTO_INCREMENT de la tabla `carpeta`
 --
 ALTER TABLE `carpeta`
-  MODIFY `codigo_car` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `codigo_car` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `departamento`
 --
@@ -183,7 +207,12 @@ ALTER TABLE `responsable`
 -- AUTO_INCREMENT de la tabla `tipo`
 --
 ALTER TABLE `tipo`
-  MODIFY `codigo_tip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `codigo_tip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id_usuario` int(2) NOT NULL AUTO_INCREMENT;
 --
 -- Restricciones para tablas volcadas
 --

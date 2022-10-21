@@ -1,7 +1,7 @@
 
-package com.seguimiento.carpetas.Dao;
+package com.sistema.seguimiento.Dao;
 
-import com.seguimiento.carpetas.Models.Tipo;
+import com.sistema.seguimiento.Models.Tipo;
 import org.springframework.data.repository.CrudRepository;
 
 public interface TipoDao extends CrudRepository<Tipo, Integer> {

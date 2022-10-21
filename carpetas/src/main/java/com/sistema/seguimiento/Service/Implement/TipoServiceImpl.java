@@ -1,14 +1,13 @@
+package com.sistema.seguimiento.Service.Implement;
 
-package com.seguimiento.carpetas.Service.Implements;
-
-import com.seguimiento.carpetas.Dao.TipoDao;
-import com.seguimiento.carpetas.Models.Tipo;
-import com.seguimiento.carpetas.Services.TipoService;
+import com.sistema.seguimiento.Models.Tipo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.sistema.seguimiento.Dao.TipoDao;
+import com.sistema.seguimiento.Service.TipoService;
 
 @Service
 public class TipoServiceImpl implements TipoService {
